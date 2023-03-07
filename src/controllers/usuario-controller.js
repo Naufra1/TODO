@@ -1,9 +1,17 @@
-import app from '../app.js'
+import { bdUsuarios } from "../infra/db"
 
-function getUsuarios(app) {
-  app.get('/usuarios', (req, res) => {
-    res.send('Utilizando a rota usuarios e pegando o dados do usuario')
-  })
+function usuarioController(app) {
+  app.get('/usuario', listar)
+  app.post('/usuario', inserir)
+  function listar(req, res) {
+      const usuarios = bdUsuarios
+      // Devolve a lista de Usuarios
+      res.send(usuarios)
+  }
+  function inserir(req, res) {
+      res.send('Método POST')
+      console.log(req.body)
+  }
 }
 
-export default getUsuarios
+export default usuarioController
