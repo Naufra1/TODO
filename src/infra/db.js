@@ -1,5 +1,5 @@
-import Usuario from '../models/usuario'
-import Tarefa from '../models/tarefa'
+import Usuario from '../models/usuario.js'
+import Tarefa from '../models/tarefa.js'
 
 const bdUsuarios = []
 const bdTarefas = []

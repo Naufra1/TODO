@@ -1,4 +1,4 @@
-import { bdTarefas } from "../infra/db"
+import { bdTarefas } from "../infra/db.js"
 
 function tarefaController(app) {
   app.get('/tarefa', listar)
